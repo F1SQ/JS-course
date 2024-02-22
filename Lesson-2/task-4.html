@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Задача 4</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Задача 4</h1>
+            <p class="task-description">Дано довжину у сантиметрах. Визначити скільки це метрів і кілометрів</p>
+
+            <script defer>
+                let lengthCm = parseInt(prompt("Введіть довжину в см"));
+                let lengthM = lengthCm / 100;
+                let lengthKm = lengthM / 1000;
+                lengthM = lengthM.toFixed(2);
+                lengthKm = lengthKm.toFixed(4);
+
+                document.write(
+                    `
+                      <span>Вказана довжина в см: <strong>${lengthCm}</strong></span><br>
+                      <span>Довжина в метрах: <span class="answer">${lengthM}</span></span><br>
+                      <span>Довжина в кілометрах: <span class="answer">${lengthKm}</span></span><br>
+
+                    `
+                );
+            </script>
+        </div>
+        <a class="toAllTasks" href="index.html">Назад до всіх задач уроку</a>
+    </body>
+</html>

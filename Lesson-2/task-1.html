@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Задача 1</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Задача 1</h1>
+            <p class="task-description">Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</p>
+
+            <script defer>
+                let a = parseFloat(prompt("Введіть значення  a"));
+                let b = parseFloat(prompt("Введіть значення  b"));
+                let sum = a + b;
+                let product = a * b;
+                let fraction = a / b;
+
+                document.write(
+                    `
+
+
+                <span>Ви ввели значення для <strong>a = ${a}</strong></span><br>
+                <span>Ви ввели значення для <strong>b = ${b}</strong></span><br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Операція</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Сума</td>
+                                <td>${sum}</td>
+                            </tr>
+                            <tr>
+                                <td>Добуток</td>
+                                <td>${product}</td>
+                            </tr>
+                            <tr>
+                                <td>Частка</td>
+                                <td>${fraction}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    `
+                );
+            </script>
+        </div>
+        <a class="toAllTasks" href="index.html">Назад до всіх задач уроку</a>
+    </body>
+</html>

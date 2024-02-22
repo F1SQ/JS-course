@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Задача 6</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Задача 6</h1>
+            <p class="task-description">
+                З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість.
+                Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+            </p>
+
+            <script defer>
+                let prod1Cost = parseInt(prompt("Введіть вартість товару #1"));
+                let prod1Quantity = parseInt(prompt("Введіть кількість товару #1"));
+                let prod1TotalPrice = prod1Cost * prod1Quantity;
+                let prod2Cost = parseInt(prompt("Введіть вартість товару #2"));
+                let prod2Quantity = parseInt(prompt("Введіть кількість товару #2"));
+                let prod2TotalPrice = prod2Cost * prod2Quantity;
+                let prod3Cost = parseInt(prompt("Введіть вартість товару #3"));
+                let prod3Quantity = parseInt(prompt("Введіть кількість товару #3"));
+                let prod3TotalPrice = prod3Cost * prod3Quantity;
+                let date = Date();
+
+                function totalPrice(a, b, c) {
+                    d = a + b + c;
+                    return d;
+                }
+
+                document.write(
+                    `
+                    <div class="lesson2Task6-wrapper">
+
+                      <h2>"Назва магазину"</h2>
+                      <h3>Фіскальний чек</h3>
+                      <h5>Обслуговуюча каса №4</h5>
+                      <h5>Касир: Шевченко Л.В.</h5>
+                     <span class="list-title">Список товарів:</span>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Назва товару</th>
+                            <th>Вартість</th>
+                            <th>Кількість</th>
+                            <th>Сума</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Товар #1</td>
+                            <td>${prod1Cost}</td>
+                            <td>${prod1Quantity}</td>
+                            <td>${prod1TotalPrice}</td>
+                          </tr>
+                          <tr>
+                            <td>Товар #2</td>
+                            <td>${prod2Cost}</td>
+                            <td>${prod2Quantity}</td>
+                            <td>${prod2TotalPrice}</td>
+                          </tr>
+                          <tr>
+                            <td>Товар #3</td>
+                            <td>${prod3Cost}</td>
+                            <td>${prod3Quantity}</td>
+                            <td>${prod3TotalPrice}</td>
+                          </tr>
+
+                          </tbody>
+
+                      </table>
+                      <span class="total-price">Загальна сума: ${totalPrice(prod1TotalPrice, prod2TotalPrice, prod3TotalPrice)} грн.</span>
+
+
+                      <div class="date">
+                        <span>Дата покупки:</span>
+                        <span>${date}</span>
+                      </div>
+                    </div>
+
+                    `
+                );
+            </script>
+        </div>
+        <a class="toAllTasks" href="index.html">Назад до всіх задач уроку</a>
+    </body>
+</html>
